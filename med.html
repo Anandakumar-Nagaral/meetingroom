@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title>Meeting Room Details</title>
+ 	<link rel="stylesheet" href="style1.css">
+    <script src="jquery-3.1.1.min.js"></script>
+      <script type="text/javascript">
+     $(document).ready(function(){
+         $('.signIn').click(function(){
+             $('.fold').toggleClass('active')
+         })
+     })
+     </script>
+</head>
+<body>
+	<div class="container">
+	<div class="signIn">Meeting Details</div>
+	<div class="fold">
+		<form method="post" action="connect1.php">
+			<input type="number" name="empid"  placeholder="Emp Id" >
+			<input type="text" name="title" placeholder="Title" required pattern="[a-zA-z _]{1,50}" title"Please Enter Only Characters between 1 to 50 for title" >
+            <tr><td class="blue">Member Date</td><input type="date" name="memberdate" placeholder="Member Date" ></tr>
+            <tr><td style="color: #0000ff">Start Time</td><input type="time" name="starttime" placeholder="Start Time"></tr>
+           <tr><td style="color:#33DDFF">End Time</td><input type="time" name="endtime" placeholder="End Time"></tr>
+            <input type="text" name="snacks" placeholder="Snaks" required pattern="[a-zA-z _]{1,50}" title"Please Enter Only Characters between 1 to 50 for snacks" >
+			<input type="submit" name="" value="Book Now">
+            <a href="empui.php">Back</a>
+		</form>
+	</div>
+</div>
+</body>
+</html>
